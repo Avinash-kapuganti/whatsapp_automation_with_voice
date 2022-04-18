@@ -22,12 +22,7 @@ make sure the seconds left is greater than the wait_time
 SyntaxError - Make sure the first two parameters are string and the rest are int"""
 
 import pywhatkit as kit
-# Python program to translate
-# speech to text and text to speech
 
-
-# Python program to translate
-# speech to text and text to speech
 
 
 import speech_recognition as sr
@@ -46,29 +41,21 @@ def SpeakText(command):
 	engine.runAndWait()
 	
 	
-# Loop infinitely for user to
-# speak
 
-
-
-    # Exception handling to handle
-	# exceptions at the runtime
 try:
 		
-	# use the microphone as source for input.
+	
 	with sr.Microphone() as source2:
                                                
 			
-	    # wait for a second to let the recognizer
-	    # adjust the energy threshold based on
-	    # the surrounding noise level
+	   
 	    print("speak")
 	    r.adjust_for_ambient_noise(source2, duration=0.2)
 			
-	    #listens for the user's input
+	   
 	    audio2 = r.listen(source2)
 			
-	    # Using ggogle to recognize audio
+	   
 	    MyText = r.recognize_google(audio2)
 	    MyText = MyText.lower()
 
